@@ -4,10 +4,10 @@ import { Menu, X } from 'lucide-react'
 const NavLink = ({ href, children }) => (
   <a
     href={href}
-    className="relative text-sm md:text-base text-neutral-900 hover:text-neutral-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#BDAE96] focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded"
+    className="group relative text-sm md:text-base text-neutral-900 hover:text-neutral-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#BDAE96] focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded"
   >
     <span className="pb-1">{children}</span>
-    <span className="absolute left-1/2 -translate-x-1/2 -bottom-0.5 h-[2px] w-0 bg-[#BDAE96] transition-all duration-300 group-hover:w-full" />
+    <span className="pointer-events-none absolute left-1/2 -translate-x-1/2 -bottom-0.5 h-[2px] w-0 bg-[#BDAE96] transition-all duration-300 group-hover:w-full" aria-hidden="true" />
   </a>
 )
 
@@ -33,7 +33,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between" aria-label="Primary">
         {/* Left: Logo */}
         <a href="#" className="font-[\"Playfair Display\"] italic text-2xl tracking-tight select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#BDAE96] focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded" aria-label="NERA home">
-          <span aria-hidden>Logo</span>
+          <span aria-hidden="true">Logo</span>
           <span className="sr-only">NERA</span>
         </a>
 
@@ -70,7 +70,7 @@ export default function Navbar() {
           aria-controls="mobile-menu"
           aria-expanded={open}
         >
-          {open ? <X size={18} aria-hidden /> : <Menu size={18} aria-hidden />} 
+          {open ? <X size={18} aria-hidden="true" /> : <Menu size={18} aria-hidden="true" />} 
         </button>
       </nav>
 
