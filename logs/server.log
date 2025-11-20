@@ -3,47 +3,24 @@
 > vite
 
 
-  VITE v5.4.20  ready in 204 ms
+  VITE v5.4.20  ready in 197 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.20.87.96:3000/
-11:55:11 AM [vite] Pre-transform error: Transform failed with 1 error:
-/home/workspace/src/components/Navbar.jsx:25:48: ERROR: Unexpected backslash in JSX element
-11:55:13 AM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/components/Navbar.jsx:25:48: ERROR: Unexpected backslash in JSX element
+12:01:17 PM [vite] Pre-transform error: Transform failed with 1 error:
+/home/workspace/src/components/Navbar.jsx:35:55: ERROR: Unexpected backslash in JSX element
+12:01:19 PM [vite] Internal server error: Transform failed with 1 error:
+/home/workspace/src/components/Navbar.jsx:35:55: ERROR: Unexpected backslash in JSX element
   Plugin: vite:esbuild
-  File: /home/workspace/src/components/Navbar.jsx:25:48
+  File: /home/workspace/src/components/Navbar.jsx:35:55
   
   Unexpected backslash in JSX element
-  23 |        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-  24 |          {/* Left: Handwritten-style placeholder logo */}
-  25 |          <div className="font-[\"Playfair Display\"] italic text-2xl tracking-tight select-none">
-     |                                                  ^
-  26 |            Logo
-  27 |          </div>
-  
-      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
-      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
-      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
-      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
-      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
-      at Socket.emit (node:events:508:28)
-      at addChunk (node:internal/streams/readable:559:12)
-      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
-      at Readable.push (node:internal/streams/readable:390:5)
-      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-11:55:40 AM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/components/Navbar.jsx:25:48: ERROR: Unexpected backslash in JSX element
-  Plugin: vite:esbuild
-  File: /home/workspace/src/components/Navbar.jsx:25:48
-  
-  Unexpected backslash in JSX element
-  23 |        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-  24 |          {/* Left: Handwritten-style placeholder logo */}
-  25 |          <div className="font-[\"Playfair Display\"] italic text-2xl tracking-tight select-none">
-     |                                                  ^
-  26 |            Logo
-  27 |          </div>
+  33 |        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between" aria-label="Primary">
+  34 |          {/* Left: Logo */}
+  35 |          <a href="#" className="font-[\"Playfair Display\"] italic text-2xl tracking-tight select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#BDAE96] focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded" aria-label="NERA home">
+     |                                                         ^
+  36 |            <span aria-hidden>Logo</span>
+  37 |            <span className="sr-only">NERA</span>
   
       at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
       at /home/workspace/node_modules/esbuild/lib/main.js:755:50

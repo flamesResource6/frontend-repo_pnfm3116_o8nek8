@@ -8,18 +8,24 @@ import './index.css'
 function App() {
   return (
     <div className="bg-white text-neutral-900">
+      {/* Skip to content for accessibility */}
+      <a
+        href="#content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-neutral-900 focus:text-white focus:px-4 focus:py-2 focus:rounded"
+      >
+        Skip to content
+      </a>
       <Navbar />
-      <main>
+      <main id="content" aria-label="Main content">
         <Hero />
         {/* Trust strip */}
-        <section className="bg-white">
+        <section className="bg-white" aria-label="As featured in">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            <div className="flex items-center justify-center gap-10 opacity-60 text-neutral-700 text-sm">
-              <span>Vogue</span>
-              <span>Elle</span>
-              <span>Harper's Bazaar</span>
-              <span>Refinery29</span>
-            </div>
+            <ul className="flex items-center justify-center gap-10 opacity-60 text-neutral-700 text-sm" role="list">
+              {['Vogue','Elle','Harper\'s Bazaar','Refinery29'].map(name => (
+                <li key={name} aria-label={`Featured in ${name}`}>{name}</li>
+              ))}
+            </ul>
           </div>
         </section>
 

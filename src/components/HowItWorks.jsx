@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Step = ({ number, title, desc }) => (
-  <div className="group rounded-3xl border border-neutral-200 p-6 sm:p-8 transition-colors hover:bg-[#F7EDEE]">
+  <div className="group rounded-3xl border border-neutral-200 p-6 sm:p-8 transition-colors hover:bg-[#F7EDEE] focus-within:ring-2 focus-within:ring-[#BDAE96]" tabIndex={0}>
     <div className="text-sm text-neutral-500">Step {number}</div>
     <h3 className="mt-2 font-serif text-2xl text-neutral-900">{title}</h3>
     <p className="mt-3 text-neutral-700 leading-relaxed">{desc}</p>
@@ -10,10 +10,10 @@ const Step = ({ number, title, desc }) => (
 
 export default function HowItWorks() {
   return (
-    <section className="bg-white">
+    <section id="fit" className="bg-white" aria-labelledby="how-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-2xl">
-          <h2 className="font-serif text-3xl sm:text-4xl text-neutral-900">How it works</h2>
+          <h2 id="how-heading" className="font-serif text-3xl sm:text-4xl text-neutral-900">How it works</h2>
           <p className="mt-3 text-neutral-700">A private, thoughtful journey to a better fit.</p>
         </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
